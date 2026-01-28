@@ -1,0 +1,27 @@
+---
+title: "Mapping CMS Fields to Your Frontmatter"
+date: "2026-01-28"
+excerpt: "A quick mapping guide that makes it easy to replace local MDX with Sanity or Strapi later."
+author: "alex-writer"
+category: "CMS"
+tags:
+  - "CMS"
+  - "Content"
+coverImage: "/images/placeholder.svg"
+metaTitle: "Mapping CMS Fields to Your Frontmatter"
+metaDescription: "A simple mapping layer pattern: keep Post shapes stable while swapping from MDX files to a headless CMS."
+ogImage: "/images/placeholder.svg"
+canonicalUrl: "/blog/cms-field-mapping-guide"
+---
+
+## Treat your Post shape as a contract
+
+Decide the fields your UI needs (title, excerpt, author, tags) and keep them stable.
+
+## Normalize early
+
+Convert CMS responses into your local `Post` model in one place. Don’t leak provider details into pages.
+
+## Keep slugs boring
+
+Stable slugs prevent broken links. Prefer readable phrases over campaign-style strings.
